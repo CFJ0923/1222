@@ -1,0 +1,350 @@
+/* 全域樣式 */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+ul.mode2 {
+    display: flex;
+    justify-content: space-between; /* 平均分布 */
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0 20px;
+}
+
+ul.mode2 li {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+ul.mode2 .logopic img {
+    height: 50px;
+}
+
+ul.mode2 .head {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+ul.mode2 .search {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+ul.mode2 .search input {
+    border: none;
+    outline: none;
+    margin-left: 5px;
+}
+
+ul.mode2 .search img {
+    height: 20px;
+}
+
+ul.mode2 .head img {
+    height: 20px;
+    margin-right: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    z-index: 1000;
+    min-width: 150px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px 12px;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    ul.mode2 {
+        flex-direction: column;
+    }
+
+    ul.mode2 li {
+        margin: 10px 0;
+    }
+}
+
+
+/* 主導航欄樣式 */
+.main-nav {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+.main-nav .container {
+    display: flex;
+    justify-content: space-around; /* 平均分布 */
+    align-items: center;
+}
+
+.main-nav .nav-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.main-nav .nav-link:hover {
+    color: #007bff; /* 懸停時變色 */
+}
+
+/* 響應式設計：小於768px時改為垂直堆疊 */
+@media (max-width: 768px) {
+    .main-nav .container {
+        flex-direction: column; /* 改為垂直排列 */
+    }
+
+    .main-nav .nav-link {
+        margin: 10px 0; /* 增加間距 */
+        font-size: 16px;
+    }
+}
+
+/* 搜尋欄 */
+.search-bar input {
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    border-radius: 4px;
+    outline: none;
+}
+
+.search-bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+}
+
+
+
+/* 主頁橫幅  Main*/
+.banner {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.banner-img {
+    width: 100%;
+    height: auto;
+}
+
+/* 商品列表 */
+.product-list {
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.product-list h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #6C757D;
+}
+
+.product {
+    display: inline-block;
+    width: 45%;
+    margin: 2.5%;
+    text-align: center;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    width: 100%;
+    max-width: 150px;
+    margin-bottom: 10px;
+}
+
+.product h3 {
+    margin: 10px 0;
+    color: #495057;
+}
+
+.product p {
+    color: #6C757D;
+}
+
+.product button {
+    background-color: #6C757D;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.product button:hover {
+    background-color: #5a6268;
+}
+
+/* 頁尾 */
+/* Footer 總體樣式 */
+.footer {
+    background-color: #f9f9f9;
+    padding: 20px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: center;
+}
+
+/* Footer Sections 基本樣式 */
+.footer-section {
+    margin-bottom: 20px;
+    flex: 1 1 100%; /* 手機預設直排列 */
+}
+
+/* 電腦版時佈局 */
+@media (min-width: 768px) {
+    .footer-section {
+        flex: 1; /* 電腦版水平佈局 */
+        text-align: left;
+    }
+}
+
+/* 選單連結樣式 */
+.footer-links .footer-link {
+    display: block;
+    color: #555; /* 初始顏色：灰色 */
+    text-decoration: none;
+    font-family: 'Noto Sans TC', sans-serif; /* 使用新字體 */
+    font-size: 20px; /* 字體大小 */
+    font-weight: 500; /* 加強字重 */
+    margin-bottom: 5px; /* 每個連結的間距 */
+    transition: all 0.3s ease; /* 增加平滑效果 */
+    text-align: left; /* 電腦版左對齊 */
+}
+
+/* 滑鼠懸停效果 */
+.footer-links .footer-link:hover {
+    color: #ff5722; /* 懸停顏色：亮橘色 */
+    font-weight: 700; /* 加粗字體 */
+    text-decoration: underline; /* 增加下劃線 */
+}
+
+/* 手機預設樣式 */
+@media (max-width: 768px) {
+    .footer-links .footer-link {
+        text-align: center; /* 手機版文字置中 */
+    }
+}
+
+/* 社群連結樣式 */
+.footer-social {
+    text-align: center;
+}
+
+.footer-social .footer-social-link {
+    display: inline-block;
+    color: #333;
+    font-size: 24px; /* 調整圖示大小 */
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer-social .footer-social-link:hover {
+    color: #007bff;
+}
+/* 版權資訊樣式 */
+.footer-copyright {
+    color: #888;
+    font-size: 12px;
+    text-align: center;
+}
+
+
+/* 浮動按鈕 */
+.float-btn-cart,
+.float-btn-totop {
+    position: fixed;
+    right: 20px;
+    bottom: 100px;
+    background-color: #6C757D;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.float-btn-totop {
+    bottom: 150px;
+}
+
+.float-btn-cart:hover,
+.float-btn-totop:hover {
+    background-color: #5a6268;
+}
+
+/* 響應式設計 */
+@media (min-width: 768px) {
+    .top-nav-mobile {
+        display: none;
+    }
+
+    .top-nav-desktop {
+        display: flex;
+    }
+
+    .product {
+        width: 30%;
+        margin: 1.5%;
+    }
+}
